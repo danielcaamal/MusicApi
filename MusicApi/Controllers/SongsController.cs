@@ -57,6 +57,7 @@ namespace MusicApi.Controllers
             }
             oldSong.Title = newSong.Title;
             oldSong.Language = newSong.Language;
+            oldSong.Duration = newSong.Duration;
             await _dbContext.SaveChangesAsync();
             return Ok(newSong);
         }
